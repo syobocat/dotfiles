@@ -3,7 +3,7 @@ opt.ambiwidth = "double"
 opt.breakindent = true
 opt.browsedir = "current"
 opt.clipboard:append({unnamedplus = true})
-opt.completeopt = "menu,preview,noinsert"
+opt.completeopt = "menu,menuone,preview,noinsert,noselect"
 opt.confirm = true
 opt.copyindent = true
 opt.cursorline = true
@@ -37,6 +37,9 @@ require"nvim-treesitter.configs".setup {
     ensure_installed = { "lua", "rust" },
 }
 
+vim.diagnostic.config({
+    update_in_insert = true,
+})
 require"mason".setup()
 require"mason-lspconfig".setup()
 require"mason-lspconfig".setup_handlers {
@@ -51,6 +54,13 @@ capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 local cmp = require"cmp"
 cmp.setup({
+    mapping = cmp.mapping.preset.insert({
+        ["<C-p>"] = cmp.mapping.select_prev_item(),
+        ["<C-n>"] = cmp.mapping.select_next_item(),
+        ['<C-l>'] = cmp.mapping.complete(),
+        ['<C-e>'] = cmp.mapping.abort(),
+        ["<CR>"] = cmp.mapping.confirm { select = true },
+    }),
     sources = cmp.config.sources({
         { name = "nvim_lsp" },
     })
