@@ -1,0 +1,49 @@
+[cpu]
+label= 
+color=#e06c75
+command=printf "%02d%%\n" "$(expr 100 - $(vmstat 1 2 | sed -n 4p | awk '{print $15}'))"
+interval=5
+
+[gpu]
+label= 
+color=#e5c07b
+command=printf "%02d%%\n" "$(nvidia-smi -q | awk '/Gpu/{print $3}')"
+interval=5
+
+[mem]
+label= 
+color=#98c379
+command=printf "%02d%% (%02d%%)\n" "$(free | awk '/Mem/{print $2, $3}' | xargs sh -c 'echo $(expr $1 "*" 100 / $0)')" "$(free | awk '/Swap/{print $2, $3}' | xargs sh -c 'echo $(expr $1 "*" 100     / $0)')"
+interval=5
+
+[uptime]
+label= 
+#color=#56b6c2
+color=#61afef
+command=uptime | sed 's/.*up \([^,]*\),.*/\1/'
+interval=60
+
+[volume]
+label= 
+#color=#61afef
+color=#9b9beb
+command=bash ./volume.sh
+interval=once
+signal=10
+
+[bluetooth]
+label= 
+color=#9b9beb
+command=bluetoothctl info | sed -n 's/^.*Name: \(.*\)$/\1/p'
+interval=5
+
+[date]
+label= 
+color=#d787d7
+command=date +"%Y/%m/%d (%a)"
+interval=once
+
+[time]
+color=#d787d7
+command=date +"%H:%M %S"
+interval=1
