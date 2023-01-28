@@ -1,0 +1,30 @@
+[submodule "config/nvim/pack/pack/start/indentLine"]
+	path = config/nvim/pack/pack/start/indentLine
+	url = https://github.com/Yggdroot/indentLine.git
+[submodule "config/nvim/pack/pack/start/nvim-autopairs"]
+	path = config/nvim/pack/pack/start/nvim-autopairs
+	url = https://github.com/windwp/nvim-autopairs.git
+[submodule "config/nvim/pack/pack/start/vim-airline"]
+	path = config/nvim/pack/pack/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "config/nvim/pack/pack/start/nvim-treesitter"]
+	path = config/nvim/pack/pack/start/nvim-treesitter
+	url = https://github.com/nvim-treesitter/nvim-treesitter.git
+[submodule "config/nvim/pack/pack/start/nvim-ts-rainbow2"]
+	path = config/nvim/pack/pack/start/nvim-ts-rainbow2
+	url = https://github.com/HiPhish/nvim-ts-rainbow2.git
+[submodule "config/nvim/pack/pack/start/nvim-lspconfig"]
+	path = config/nvim/pack/pack/start/nvim-lspconfig
+	url = https://github.com/neovim/nvim-lspconfig.git
+[submodule "config/nvim/pack/pack/start/mason.nvim"]
+	path = config/nvim/pack/pack/start/mason.nvim
+	url = https://github.com/williamboman/mason.nvim.git
+[submodule "config/nvim/pack/pack/start/mason-lspconfig.nvim"]
+	path = config/nvim/pack/pack/start/mason-lspconfig.nvim
+	url = https://github.com/williamboman/mason-lspconfig.nvim.git
+[submodule "config/nvim/pack/pack/start/nvim-cmp"]
+	path = config/nvim/pack/pack/start/nvim-cmp
+	url = https://github.com/hrsh7th/nvim-cmp.git
+[submodule "config/nvim/pack/pack/start/cmp-nvim-lsp"]
+	path = config/nvim/pack/pack/start/cmp-nvim-lsp
+	url = https://github.com/hrsh7th/cmp-nvim-lsp.git

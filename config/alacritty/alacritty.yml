@@ -6,7 +6,7 @@ font:
     family: 'Cascadia Mono PL'
 
 window:
-  opacity: 0.9
+  opacity: 0.95
 
 # Colors (One Dark - https://github.com/atom/atom/tree/master/packages/one-dark-syntax)
 colors:
