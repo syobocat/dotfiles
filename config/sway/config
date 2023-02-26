@@ -11,7 +11,7 @@ set $menu "wofi -S drun -I -G"
 
 # Autostart
 exec fcitx5 -dr
-exec dunst
+#exec dunst
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec gpg-agent --daemon
 
@@ -21,7 +21,7 @@ output * background ~/BG.png fill
 #xwayland disable
 
 # Appearance
-seat seat0 xcursor_theme gentoo-silver 24
+seat seat0 xcursor_theme UmiCursor 32
 bar {
     status_command i3blocks
     separator_symbol " / "

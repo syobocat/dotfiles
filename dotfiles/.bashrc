@@ -17,6 +17,7 @@ fi
 
 # Put your fun stuff here.
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+    export LANG="ja_JP.UTF-8"
 	export XCURSOR_PATH=/usr/share/icons:/usr/share/cursors/:~/.local/share/icons
         export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 
