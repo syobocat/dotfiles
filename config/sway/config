@@ -11,7 +11,7 @@ set $menu "wofi -S drun -I -G"
 
 # Autostart
 exec fcitx5 -dr
-#exec dunst
+exec dunst
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec gpg-agent --daemon
 
