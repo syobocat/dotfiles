@@ -17,8 +17,6 @@ fi
 
 # Put your fun stuff here.
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-    export LANG="ja_JP.UTF-8"
-
     # Enable Wayland Support
     export QT_QPA_PLATFORM=wayland
     export MOZ_ENABLE_WAYLAND=1
