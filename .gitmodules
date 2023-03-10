@@ -28,3 +28,6 @@
 [submodule "config/nvim/pack/pack/start/cmp-nvim-lsp"]
 	path = config/nvim/pack/pack/start/cmp-nvim-lsp
 	url = https://github.com/hrsh7th/cmp-nvim-lsp.git
+[submodule "config/nvim/pack/pack/start/vim-one"]
+	path = config/nvim/pack/pack/start/vim-one
+	url = https://github.com/rakr/vim-one.git
