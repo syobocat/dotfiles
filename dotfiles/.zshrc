@@ -1,7 +1,7 @@
 # Environment
 typeset -U path
-path+=(/home/syobon/.cargo/bin
-       /home/syobon/.local/bin)
+path+=(${HOME}/.cargo/bin
+       ${HOME}/.local/bin)
 export PATH
 
 export EDITOR=nvim
