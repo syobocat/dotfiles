@@ -1,6 +1,3 @@
-shell:
-  program: /bin/fish
-
 font:
   normal:
     family: 'Cascadia Mono PL'

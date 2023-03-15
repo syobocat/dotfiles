@@ -31,3 +31,9 @@
 [submodule "config/nvim/pack/pack/start/vim-one"]
 	path = config/nvim/pack/pack/start/vim-one
 	url = https://github.com/rakr/vim-one.git
+[submodule "config/zsh/zsh-autosuggestions"]
+	path = config/zsh/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "config/zsh/zsh-syntax-highlighting"]
+	path = config/zsh/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
