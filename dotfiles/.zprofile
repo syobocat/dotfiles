@@ -3,6 +3,7 @@ if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
 
     # Enable Wayland Support
     export QT_QPA_PLATFORM=wayland
+    export SDL_VIDEODRIVER=wayland
     export MOZ_ENABLE_WAYLAND=1
 
     # Wayland Workarounds
