@@ -29,6 +29,7 @@ PROMPT="[%n@%m %{$fg[green]%}%~%{$reset_color%}]%# "
 RPROMPT="%{$fg[red]%}[%?]%{$reset_color%}"
 
 # History
+HISTFILE=${HOME}/.zsh_history
 HISTSIZE=1000
 SAVEHIST=10000
 setopt HIST_FCNTL_LOCK
@@ -36,8 +37,12 @@ setopt HIST_IGNORE_DUPS
 setopt HIST_REDUCE_BLANKS
 setopt SHARE_HISTORY
 
-bindkey "^[[A" history-beginning-search-backward
-bindkey "^[[B" history-beginning-search-forward
+autoload -U history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey -d
+bindkey "^[[A" history-beginning-search-backward-end
+bindkey "^[[B" history-beginning-search-forward-end
 
 # Plugins
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
