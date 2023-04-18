@@ -6,7 +6,6 @@ export PATH
 
 export EDITOR=nvim
 
-alias logout='swaymsg exit'
 alias update='doas emerge --sync && doas emerge -auDN @world && doas emerge -a --depclean'
 
 # Shell
