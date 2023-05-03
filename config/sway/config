@@ -20,8 +20,9 @@ set $main_display 'Ancor Communications Inc ASUS VP228 L7LMTF285907'
 set $sub_display 'DO NOT USE - RTK RTK FHD HDR demoset-1'
 output $main_display resolution 1920x1080 position 0,0
 output $sub_display resolution 1920x1080 scale 1.44 position 1920,70 transform 270
-output * background ~/BG.png fill
-workspace 0 output $sub_display
+output $main_display background ~/BG_main_1.png fill
+output $sub_display background ~/BG_sub.png fill
+workspace 10 output $sub_display
 workspace 1 output $main_display
 workspace 2 output $main_display
 workspace 3 output $main_display
@@ -119,7 +120,7 @@ bindsym $mod+6 workspace number 6
 bindsym $mod+7 workspace number 7
 bindsym $mod+8 workspace number 8
 bindsym $mod+9 workspace number 9
-bindsym $mod+0 workspace number 0
+bindsym $mod+0 workspace number 10
 
 bindsym $mod+Shift+1 move container to workspace number 1
 bindsym $mod+Shift+2 move container to workspace number 2
@@ -130,7 +131,7 @@ bindsym $mod+Shift+6 move container to workspace number 6
 bindsym $mod+Shift+7 move container to workspace number 7
 bindsym $mod+Shift+8 move container to workspace number 8
 bindsym $mod+Shift+9 move container to workspace number 9
-bindsym $mod+Shift+0 move container to workspace number 0
+bindsym $mod+Shift+0 move container to workspace number 10
 
 
 mode "resize" {
