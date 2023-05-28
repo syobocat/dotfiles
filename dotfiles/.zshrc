@@ -37,12 +37,9 @@ setopt HIST_IGNORE_DUPS
 setopt HIST_REDUCE_BLANKS
 setopt SHARE_HISTORY
 
-autoload -U history-search-end
-zle -N history-beginning-search-backward-end history-search-end
-zle -N history-beginning-search-forward-end history-search-end
 bindkey -d
-bindkey "^[[A" history-beginning-search-backward-end
-bindkey "^[[B" history-beginning-search-forward-end
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
 
 # Plugins
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
