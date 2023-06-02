@@ -1,7 +1,9 @@
+export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+gpg-agent || gpg-agent --daemon
+
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
     export LC_MESSAGES="ja_JP.UTF-8"
 
-    export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
     #exec sway --unsupported-gpu
     exec dbus-run-session Hyprland
 else
