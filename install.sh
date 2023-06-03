@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 cd "$(dirname ${0})"
 if [ "${XDG_CONFIG_HOME}" != "" ]; then
     dist="${XDG_CONFIG_HOME}"
@@ -9,5 +9,5 @@ echo "dist = ${dist}"
 
 mkdir -p "${dist}"
 
-cp -rlfT "$(readlink -f ./config/)/" ${dist}/
-cp -rlfT "$(readlink -f ./dotfiles/)/" ${HOME}/
+cp -rlf "$(readlink -f ./config/)/" ${dist}/
+cp -rlf "$(readlink -f ./dotfiles/)/" ${HOME}/
