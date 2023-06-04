@@ -9,9 +9,10 @@ set $mod Mod4
 set $menu "rofi -modi drun,run -show drun"
 
 # Autostart
-#exec --no-startup-id fcitx5 -dr
+exec --no-startup-id picom
 #exec --no-startup-id dunst
-#exec --no-startup-id gpg-agent --daemon
+exec --no-startup-id gpg-agent --daemon
+exec --no-startup-id fcitx5 -dr
 
 # Appearance
 bar {
