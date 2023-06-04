@@ -1,7 +1,8 @@
 [cpu]
 label= 
 color=#e06c75
-command=printf "%02d%%\n" "$(expr 100 - $(vmstat 1 2 | sed -n 4p | awk '{print $15}'))"
+# command=printf "%02d%%\n" "$(expr 100 - $(vmstat 1 2 | sed -n 4p | awk '{print $15}'))" # For Linux
+command=printf "%02d%%\n" "$(expr 100 - $(vmstat 1 2 | sed -n 4p | awk '{print $19}'))" # For FreeBSD
 interval=5
 
 [gpu]
@@ -13,7 +14,8 @@ interval=5
 [mem]
 label= 
 color=#98c379
-command=printf "%02d%% (%02d%%)\n" "$(free | awk '/Mem/{print $2, $3}' | xargs sh -c 'echo $(expr $1 "*" 100 / $0)')" "$(free | awk '/Swap/{print $2, $3}' | xargs sh -c 'echo $(expr $1 "*" 100     / $0)')"
+#command=printf "%02d%% (%02d%%)\n" "$(free | awk '/Mem/{print $2, $3}' | xargs sh -c 'echo $(expr $1 "*" 100 / $0)')" "$(free | awk '/Swap/{print $2, $3}' | xargs sh -c 'echo $(expr $1 "*" 100     / $0)')" # For Linux
+command=printf "%02d%% (%02d%%)\n" "$(freecolor -o | awk '/Mem/{print $2, $3}' | xargs sh -c 'echo $(expr $1 "*" 100 / $0)')" "$(freecolor -o | awk '/Swap/{print $2, $3}' | xargs sh -c 'echo $(expr $1 "*" 100     / $0)')" # For FreeBSD
 interval=5
 
 [uptime]
