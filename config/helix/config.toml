@@ -1,0 +1,21 @@
+theme = "onedark"
+
+[editor]
+shell = [ "zsh", "-c" ]
+cursorline = true
+color-modes = true
+indent-guides.render = true
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "bar"
+
+[editor.statusline]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+right = [ "file-type", "file-encoding", "file-line-ending", "separator", "position-percentage", "position" ]
+
+[editor.lsp]
+display-messages = true
