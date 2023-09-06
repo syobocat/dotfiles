@@ -4,10 +4,8 @@ path+=(${HOME}/.cargo/bin
        ${HOME}/.local/bin)
 export PATH
 
-export EDITOR=nvim
-
-alias logout='swaymsg exit'
-alias update='doas emerge --sync && doas emerge -auDN @world && doas emerge -a --depclean'
+export VISUAL=hx
+export EDITOR=hx
 
 # Shell
 setopt IGNORE_EOF
@@ -38,9 +36,13 @@ setopt HIST_REDUCE_BLANKS
 setopt SHARE_HISTORY
 
 bindkey -d
+bindkey "^[[3~" delete-char
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
 bindkey "^[[A" history-beginning-search-backward
 bindkey "^[[B" history-beginning-search-forward
 
 # Plugins
-source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+plugin_dir="/usr/local/share"
+source ${plugin_dir}/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ${plugin_dir}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

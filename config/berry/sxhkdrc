@@ -1,0 +1,64 @@
+#
+# wm independent hotkeys
+#
+
+# terminal emulator
+super + Return
+	alacritty
+
+# program launcher
+super + z
+	rofi -modi drun,run -show drun
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+super + Print
+    import -window root ~/Pictures/Screenshot_$(date +%Y%m%d_%H%M%S).png
+
+alt + Print
+    import -window $(xprop -root | awk '$1==_"_NET_ACTIVE_WINDOW(WINDOW):"{print $5}') ~/Pictures/Screenshot_$(date +%Y%m%d_%H%M%S).png
+
+super + shift + z
+    import ~/Pictures/Screenshot_$(date +%Y%m%d_%H%M%S).png
+
+#
+# berry hotkeys
+#
+
+super + {i, y, u, o}
+    berryc cardinal_focus {0, 1, 2, 3}
+
+super + Tab
+    berryc cycle_focus
+
+~button1
+    berryc pointer_focus
+
+super + {1-9}
+    berryc switch_workspace {0-9}
+
+super + shift + {1-9}
+    berryc send_to_workspace {0-9}
+
+super + m
+    berryc window_monocle && berryc toggle_decorations
+
+super + e
+    berryc snap_right
+
+super + q
+    berryc snap_left
+
+super + f
+    berryc fullscreen
+
+super + n
+    berryc toggle_decorations
+
+super + shift + q
+    berryc window_close
+
+super + c
+    berryc window_center

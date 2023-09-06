@@ -1,0 +1,12 @@
+map <enter> open
+
+cmd open ${{
+	case $(file -Lb --mime-type $f) in
+		text/*)
+			$EDITOR $fx;;
+		image/*)
+			berryc decorate_new false && feh -T default --start-at $f & berryc decorate_new true;;
+		*)
+			for f in $fx; do xdg-open $f > /dev/null 2> /dev/null & done;;
+	esac
+}}

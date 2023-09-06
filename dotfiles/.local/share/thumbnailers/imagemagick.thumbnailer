@@ -1,0 +1,4 @@
+[Thumbnailer Entry]
+TryExec=convert
+Exec=convert %i[0] -thumbnail %s %o
+MimeType=image/avif;image/webp;

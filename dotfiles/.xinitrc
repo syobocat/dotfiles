@@ -48,5 +48,9 @@ if [ -d /usr/local/etc/X11/xinit/xinitrc.d ] ; then
 	unset f
 fi
 
-exec i3
-
+picom -b
+sxhkd -c ${HOME}/.config/berry/sxhkdrc &
+${HOME}/.config/berry/lemonbar.sh &
+${HOME}/.fehbg &
+conky
+exec berry
