@@ -2,5 +2,18 @@ import:
   - ~/.config/alacritty/themes/themes/one_dark.yaml
 
 font:
+  size: 10
   normal:
     family: 'Cascadia Mono'
+
+cursor:
+  style:
+    shape: Beam
+    blinking: On
+
+mouse:
+  hide_when_typing: true
+
+window:
+  dynamic_title: true
+  resize_increments: true

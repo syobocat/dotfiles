@@ -48,9 +48,10 @@ if [ -d /usr/local/etc/X11/xinit/xinitrc.d ] ; then
 	unset f
 fi
 
+export LANG="ja_JP.UTF-8"
+export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+export LIBVA_DRIVER_NAME=nvidia-drm
+
+gpg-agent || gpg-agent --daemon
 picom -b
-sxhkd -c ${HOME}/.config/berry/sxhkdrc &
-${HOME}/.config/berry/lemonbar.sh &
-${HOME}/.fehbg &
-conky
-exec berry
+exec awesome
