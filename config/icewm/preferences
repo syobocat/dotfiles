@@ -1,0 +1,35 @@
+Alpha=1
+ShowFocusModeMenu=0
+ShowHelp=0
+ShowProgramsMenu=0
+TaskBarShowMailboxStatus=0
+TaskBarShowShowDesktopButton=2
+TaskBarShowWindowListMenu=0
+TaskBarShowWorkspaces=0
+TaskBarUseMouseWheel=0
+TimeFormat="%H:%M:%S"
+TimeFormatAlt="%H %M %S"
+
+ShutdownCommand="doas shutdown -p now"
+RebootCommand="doas shutdown -r now"
+
+KeyWinClose="Super+Shift+q"
+
+ActiveButtonFontNameXft="Noto Sans CJK JP:size=10"
+ActiveTaskBarFontNameXft="Noto Sans CJK JP:size=10"
+ActiveWorkspaceFontNameXft="Noto Sans CJK JP:size=10"
+ApmFontNameXft="Noto Sans Mono CJK JP:monospace:size=10"
+ClockFontNameXft="Cascadia Mono:monospace:size=10"
+InputFontNameXft="Noto Sans CJK JP:size=10"
+LabelFontNameXft="Noto Sans CJK JP:size=10"
+ListBoxFontNameXft="Noto Sans CJK JP:size=10"
+MenuFontNameXft="Noto Sans CJK JP:size=10:bold"
+NormalButtonFontNameXft="Noto Sans CJK JP:size=10"
+NormalTaskBarFontNameXft="Noto Sans CJK JP:size=10"
+NormalWorkspaceFontNameXft="Noto Sans CJK JP:size=10"
+QuickSwitchFontNameXft="Noto Sans Mono CJK JP:monospace:size=10:bold"
+StatusFontNameXft="Noto Sans Mono CJK JP:monospace:size=10:bold"
+TempFontNameXft="Noto Sans Mono CJK JP:monospace:size=10"
+TitleFontNameXft="Noto Sans CJK JP:size=8"
+ToolButtonFontNameXft="Noto Sans CJK JP:size=10"
+ToolTipFontNameXft="Noto Sans CJK JP:size=10"

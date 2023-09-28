@@ -1,0 +1,3 @@
+key "Super+Enter"	alacritty
+key "Super+Print"	sh -c "maim -f png -m 10 ${HOME}/Pictures/Screenshot_$(date +%Y%m%d_%H%M%S).png"
+key "Super+Shift+z"	sh -c "maim -u -f png -m 10 -s ${HOME}/Pictures/Screenshot_$(date +%Y%m%d_%H%M%S).png"
