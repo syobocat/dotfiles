@@ -9,5 +9,13 @@ echo "dist = ${dist}"
 
 mkdir -p "${dist}"
 
-cp -rlf "$(readlink -f ./config/)/" ${dist}/
-cp -rlf "$(readlink -f ./dotfiles/)/" ${HOME}/
+case "$(uname -s)"
+in
+('Linux')
+    flag="-rlfT";;
+(*)
+    flag="-rlf";;
+esac
+
+cp $flag "$(readlink -f ./config/)/" ${dist}/
+cp $flag "$(readlink -f ./dotfiles/)/" ${HOME}/

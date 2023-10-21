@@ -45,6 +45,6 @@ bindkey "^[[A" history-beginning-search-backward
 bindkey "^[[B" history-beginning-search-forward
 
 # Plugins
-plugin_dir="/usr/local/share"
-source ${plugin_dir}/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ${plugin_dir}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+plugin_dir="/usr/share/zsh/site-functions"
+#source ${plugin_dir}/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ${plugin_dir}/zsh-syntax-highlighting.zsh

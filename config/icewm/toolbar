@@ -1,0 +1,2 @@
+prog "Browser" firefox firefox
+prog "Terminal" Alacritty alacritty

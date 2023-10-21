@@ -2,8 +2,8 @@
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
-sysresources=/usr/local/etc/X11/xinit/.Xresources
-sysmodmap=/usr/local/etc/X11/xinit/.Xmodmap
+sysresources=/etc/X11/xinit/Xresources
+sysmodmap=/etc/X11/xinit/Xmodmap
 
 # merge in defaults and keymaps
 
@@ -41,13 +41,25 @@ fi
 
 # start some nice programs
 
-if [ -d /usr/local/etc/X11/xinit/xinitrc.d ] ; then
-	for f in /usr/local/etc/X11/xinit/xinitrc.d/?*.sh ; do
-		[ -x "$f" ] && . "$f"
-	done
-	unset f
+if [ -n "`/etc/X11/chooser.sh`" ]; then
+ command="`/etc/X11/chooser.sh`"
+else
+ failsafe="yes"
 fi
 
-export SSH_AUTH_SOCK=/home/syobon/.gnupg/S.gpg-agent.ssh
-export LANG=ja_JP.UTF-8
-exec icewm-session
+if [ -d /etc/X11/xinit/xinitrc.d ] ; then
+ for f in /etc/X11/xinit/xinitrc.d/?* ; do
+  [ -x "$f" ] && . "$f"
+ done
+ unset f
+fi
+
+if [ -n "$failsafe" ]; then
+ export LANG="ja_JP.UTF-8"
+ export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+ picom -b
+ conky
+ exec icewm-session
+else
+ exec $command
+fi

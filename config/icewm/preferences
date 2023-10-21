@@ -7,11 +7,16 @@ TaskBarShowShowDesktopButton=2
 TaskBarShowWindowListMenu=0
 TaskBarShowWorkspaces=0
 TaskBarUseMouseWheel=0
+TaskBarShowCPUStatus=0
+TaskBarShowMEMStatus=0
+TaskBarShowNetStatus=0
 TimeFormat="%H:%M:%S"
 TimeFormatAlt="%H %M %S"
 
-ShutdownCommand="doas shutdown -p now"
-RebootCommand="doas shutdown -r now"
+#ShutdownCommand="doas shutdown -p now"
+#RebootCommand="doas shutdown -r now"
+HibernateCommand=""
+SuspendCommand=""
 
 KeyWinClose="Super+Shift+q"
 
@@ -33,3 +38,6 @@ TempFontNameXft="Noto Sans Mono CJK JP:monospace:size=10"
 TitleFontNameXft="Noto Sans CJK JP:size=8"
 ToolButtonFontNameXft="Noto Sans CJK JP:size=10"
 ToolTipFontNameXft="Noto Sans CJK JP:size=10"
+
+DesktopBackgroundImage="~/BG.png"
+DesktopBackgroundScaled=1

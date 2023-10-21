@@ -1,0 +1,3 @@
+prog Firefox firefox firefox
+prog Alacritty Alacritty alacritty
+includeprog icewm-menu-fdo --sep-before --no-sep-others

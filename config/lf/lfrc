@@ -5,7 +5,7 @@ cmd open ${{
 		text/*)
 			$EDITOR $fx;;
 		image/*)
-			berryc decorate_new false && feh -T default --start-at $f & berryc decorate_new true;;
+			feh -T default --start-at $f;;
 		*)
 			for f in $fx; do xdg-open $f > /dev/null 2> /dev/null & done;;
 	esac
