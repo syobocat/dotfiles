@@ -40,3 +40,6 @@
 [submodule "config/alacritty/themes"]
 	path = config/alacritty/themes
 	url = https://github.com/alacritty/alacritty-theme
+[submodule "config/icewm/themes/Syobonic"]
+	path = config/icewm/themes/Syobonic
+	url = https://github.com/syobocat/icewm-theme-syobonic.git
